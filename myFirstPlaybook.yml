@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: in task one install tree
+    apt:
+       name: tree
+       state:  absent
+    
+  - name: in task two intall  git
+    apt:
+      name: git
+      state: present
+
+  - name: in  3rd task  install wget
+    apt:
+      name: wget 
+      state: present
+  
+  
