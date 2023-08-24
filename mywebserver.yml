@@ -6,3 +6,7 @@
     apt:
       name: apache2
       state: present
+  - name: in task, i want to starts apache2 webserver on ubuntu anible nodes
+    service:
+      name: apache2
+      state: started
