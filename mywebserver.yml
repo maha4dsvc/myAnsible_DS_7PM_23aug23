@@ -7,10 +7,10 @@
     apt:
       name: apache2
       state: present
-    when: anible_os_family=="Debian"
+    when: ansible_os_family=="Debian"
   - name: in task, i want to starts apache2 webserver on ubuntu anible nodes
     service:
       name: apache2
       state: started
-    when: anible_os_family=="Debian"
+    when: ansible_os_family=="Debian"
    
