@@ -5,25 +5,25 @@
   tasks: 
   - name: in task, i want to install  apache2  webserver on ubuntu ansible node
     apt:
-      name: apache2
+      name: "{{mywebpackonubuntu}}"
       state: present
     when: ansible_os_family=="Debian"
   - name: in task, i want to starts apache2 webserver on ubuntu anible nodes
     service:
-      name: apache2
+      name: "{{mywebpackonubuntu}}"
       state: started
     when: ansible_os_family=="Debian"
 
   - name: install httpd webserver on  redhat ansible node
     dnf:
-       name: httpd
+       name: "{{mywebpackonredhat}}"
        state: present
     when: ansible_os_family=="RedHat"
 
 
   - name: start webserver on redhat ansible node
     service:
-       name: httpd
+       name: "{{mywebpackonredhat}}"
        state: started
     when: ansible_os_family =="RedHat"
    
