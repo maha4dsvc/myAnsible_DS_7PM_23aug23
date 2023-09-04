@@ -1,0 +1,9 @@
+---
+- hosts: 10.0.0.5
+  become: yes
+  tasks:
+  - name: execute direct linux command
+    command: hostname -f
+      
+
+  
