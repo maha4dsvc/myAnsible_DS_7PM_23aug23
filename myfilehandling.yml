@@ -13,5 +13,5 @@
       dest: /home/maha/
   - name: copy my dyno file from master to nodes
     template:
-      src:  
+      src:  mydynofile.j2
       dest: /var/www/html/index.html
